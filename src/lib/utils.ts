@@ -16,3 +16,9 @@ export function capitalize(city: string) {
       .join(" ")}`;
   }
 }
+
+export async function sleep(ms: number) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
