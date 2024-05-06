@@ -12,7 +12,7 @@ export const contentType = "image/png";
 export default async function Image({ params }: { params: { slug: string } }) {
   return new ImageResponse(
     (
-      <section>
+      <section className="flex items-center justify-center w-full h-full">
         <h1>{params.slug}</h1>
         <p>Evento - Browse events around you</p>
       </section>

@@ -41,7 +41,10 @@ export default async function EventsPage({
 
   return (
     <main className="flex flex-col items-center py-24 px-[20px] min-h-[110vh]">
-      <H1 className="mb-28 text-center">Events in {capitalize(city)}</H1>
+      <H1 className="mb-28 text-center">
+        {city === "all" && "All Events"}
+        {city !== "all" && `Events in ${capitalize(city)}`}
+      </H1>
 
       <Suspense key={city + parsedPage.data} fallback={<Loading />}>
         {events.length > 0 ? (
