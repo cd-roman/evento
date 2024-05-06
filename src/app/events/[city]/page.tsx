@@ -1,10 +1,11 @@
-import H1 from "@/components/h1";
-import { capitalize, getEvents } from "@/lib/utils";
+import H1 from "@/components/H1";
 import EventsList from "@/components/events-list";
 import { Suspense } from "react";
 import Loading from "./loading";
 import { Metadata } from "next";
 import { z } from "zod";
+import { getEvents } from "@/lib/server-utils";
+import { capitalize } from "@/lib/utils";
 
 type Props = {
   params: {

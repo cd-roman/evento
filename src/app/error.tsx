@@ -1,6 +1,6 @@
 "use client";
 
-import H1 from "@/components/h1";
+import H1 from "@/components/H1";
 import { useEffect } from "react";
 
 export default function Error({
