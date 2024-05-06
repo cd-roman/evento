@@ -1,4 +1,4 @@
-import H1 from "@/components/H1";
+import H1 from "@/components/h1";
 import { getEvent } from "@/lib/utils";
 import { get } from "http";
 import { Metadata } from "next";
