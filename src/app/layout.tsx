@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Evento Next App",
   description: "Browse more than 10,000 events worldwide",
+  metadataBase: new URL("https://evento-theta-mauve.vercel.app/"),
 };
 
 export default function RootLayout({
