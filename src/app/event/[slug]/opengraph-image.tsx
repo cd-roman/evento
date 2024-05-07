@@ -9,22 +9,25 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image({ params }: { params: { slug: string } }) {
-  const style: React.CSSProperties = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    height: "100%",
-    textAlign: "center",
-  };
-
   return new ImageResponse(
     (
-      <section style={style}>
-        <h1>{params.slug}</h1>
-        <p>Evento - Browse events around you</p>
+      <section
+        style={{
+          fontSize: 128,
+          background: "white",
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          fontFamily: "Arial, sans-serif",
+        }}
+      >
+        <h1 style={{ fontSize: "128px" }}>{params.slug}</h1>
+        <p style={{ fontSize: "64px" }}>Evento - Browse events around you</p>
       </section>
     ),
-    { width: size.width, height: size.height }
+    {
+      ...size,
+    }
   );
 }
